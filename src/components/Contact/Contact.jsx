@@ -6,7 +6,7 @@ const Contact = ({ name, number, id, onDelete }) => {
         <div className={css.contactContainer}>
             <div>
                 <p className={css.contactInput}><FaUser />{name}</p>
-                <p className={css.contactInput}><FaPhoneAlta />{number}</p>
+                <p className={css.contactInput}><FaPhoneAlt />{number}</p>
             </div>
             <button className={ css.btn }onClick={() => onDelete(id)}>Delete</button>
         </div>
