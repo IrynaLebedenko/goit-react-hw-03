@@ -1,15 +1,16 @@
 import css from "./Contact.module.css";
-import { TiUser,  TiPhone  } from "react-icons/ti";
+import { FaUser, FaPhoneAlt } from 'react-icons/fa';
 
 const Contact = ({ name, number, id, onDelete }) => {
     return (
         <div className={css.contactContainer}>
             <div>
-                <p className={css.contactInput}><TiUser />{name}</p>
-                <p className={css.contactInput}><TiPhone />{number}</p>
+                <p className={css.contactInput}><FaUser />{name}</p>
+                <p className={css.contactInput}><FaPhoneAlta />{number}</p>
             </div>
             <button className={ css.btn }onClick={() => onDelete(id)}>Delete</button>
         </div>
     )
 }
+
 export default Contact;
