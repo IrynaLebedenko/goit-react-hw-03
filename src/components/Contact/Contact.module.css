@@ -6,12 +6,12 @@ margin-bottom: 10px;
 }
 
 .btn {
-    background-color: rgb(175, 177, 175);
+    background-color: rgb(130, 134, 130);
     border: 1px solid black;
     font-size: 14px;
 }
 
 .btn:hover{
     border: 2px solid black;
-    background-color: rgb(73, 114, 196);
+    background-color: rgb(126, 136, 245);
 }

@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import css from './App.css'
+import css from './App.module.css'
 
-import ContactForm from "./components/ContactForm/ContactForm";
-import SearchBox from "./components/SearchBox/SearchBox";
-import ContactList from "./components/ContactList/ContactList";
+import ContactForm from "../ContactForm/ContactForm";
+import SearchBox from "../SearchBox/SearchBox";
+import ContactList from "../ContactList/ContactList";
 import * as Yup from 'yup';
 
 
@@ -11,9 +11,9 @@ const initialValues = {
   name: "",
   number: "",
 };
-const FeedbackSchema = Yup.object({
+const ValidationSchema = Yup.object({
   name: Yup.string().min(3, "Too Short!").max(50, "Too Long!").required("Required"),
-  number: Yup.string().min(3, "Too short").max(50, "Too long").required("Required"),
+  number: Yup.string().matches(/^[0-9()+-]*$/, 'Invalid phone number').min(7, "Too Short!").max(50, "Too long").required("Required"),
 });
 
 
@@ -54,7 +54,7 @@ useEffect(() => {
     <h1 className={css.title}>Phonebook</h1>
     <ContactForm
         initialValues={initialValues}
-        validationSchema={FeedbackSchema}
+        validationSchema={ValidationSchema}
         onAddContact={addContact}  
         
       />

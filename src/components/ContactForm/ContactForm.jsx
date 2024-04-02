@@ -3,21 +3,12 @@ import { useId } from "react";
 import { Formik, Form, Field } from "formik";
 import { nanoid } from 'nanoid';
 import {ErrorMessage } from "formik";
-import * as Yup from "yup";
+// import * as Yup from "yup";
 
 
 
-const validationSchema = Yup.object().shape({
-    name: Yup.string()
-      .min(3, "Too Short!")
-      .max(50, "Too long!")
-      .required("This field cannot be empty!"),
-    number: Yup.number()
-      .min(7, "Too Short!")
-      .max(50, "Too long!")
-      .required("This field cannot be empty!"),
-  });
-  const ContactForm = ({ initialValues, onAddContact }) => {
+
+  const ContactForm = ({ initialValues, onAddContact, validationSchema }) => {
 
     const nameFieldId = useId();
     const numberFieldId = useId();
