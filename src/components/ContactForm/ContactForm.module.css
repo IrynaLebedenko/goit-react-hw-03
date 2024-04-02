@@ -8,6 +8,7 @@
 border: 1px solid black;
 border-radius: 5px;
 background-color: rgb(236, 240, 240);
+color: black;
 font-size: 16px;
 margin-bottom: 10px;
 padding: 4px;
@@ -27,7 +28,7 @@ width: 350px;
     };
  .formItem > .errorMessage{
     font-size: 5px;
-    color: rgb(149, 149, 149);
+    color: rgb(15, 15, 15);
 }
 
 .errorMessage {
